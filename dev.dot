@@ -1,4 +1,4 @@
-# make image: dot -Tsvg ./dev.dot -o dev.svg && xdg-open ./dev.svg
+# make image: dot -Tpng ./dev.dot -o dev.png && xdg-open ./dev.png
 
 digraph Device {
  labelloc=t;
