@@ -141,15 +141,15 @@ Wire Wire Line
 	9250 900  9350 900 
 Wire Wire Line
 	9250 1000 9350 1000
-Text GLabel 9250 1400 0    50   Output ~ 0
+Text GLabel 9250 1400 0    50   BiDi ~ 0
 SWIM
-Text GLabel 8750 1500 0    50   Input ~ 0
+Text GLabel 8750 1500 0    50   Output ~ 0
 RST
 Wire Wire Line
 	9250 1400 9350 1400
 Wire Wire Line
 	8750 1500 8850 1500
-Text GLabel 3600 1450 0    50   Input ~ 0
+Text GLabel 3600 1450 0    50   BiDi ~ 0
 SWIM
 Text GLabel 3600 1550 0    50   Input ~ 0
 RST
@@ -191,17 +191,14 @@ Wire Wire Line
 	3600 2550 3700 2550
 Wire Wire Line
 	3600 2650 3700 2650
-NoConn ~ 3700 2350
-Text GLabel 5000 1450 2    50   Output ~ 0
+Text GLabel 3600 2350 0    50   Output ~ 0
 CS_LORA
-Text GLabel 5000 1550 2    50   Output ~ 0
-CS_SENSOR
 Text GLabel 5000 1650 2    50   Input ~ 0
 BTN
 Wire Wire Line
-	4900 1450 5000 1450
+	4900 1450 5200 1450
 Wire Wire Line
-	4900 1550 5000 1550
+	4900 1550 4950 1550
 Wire Wire Line
 	4900 1650 5000 1650
 $Comp
@@ -227,14 +224,10 @@ Wire Wire Line
 	5100 1950 5100 1850
 Wire Wire Line
 	5100 1850 4900 1850
-Text GLabel 1450 1900 2    50   Output ~ 0
-SPI1_MISO
 Text GLabel 1450 1600 2    50   Input ~ 0
-SPI1_SCK
-Text GLabel 1450 1700 2    50   Input ~ 0
-SPI1_MOSI
-Text GLabel 1450 1800 2    50   Input ~ 0
-CS_SENSOR
+SCL
+Text GLabel 1450 1700 2    50   BiDi ~ 0
+SDA
 NoConn ~ 7000 1400
 Text GLabel 6900 1800 0    50   Input ~ 0
 CS_LORA
@@ -515,7 +508,7 @@ Wire Wire Line
 Connection ~ 9950 3100
 Wire Wire Line
 	9950 3100 10100 3100
-Text GLabel 7550 4550 0    50   Input ~ 0
+Text GLabel 7550 4550 0    50   Output ~ 0
 BTN
 $Comp
 L Device:R R13
@@ -993,7 +986,7 @@ U 1 1 5ACCF7B6
 P 1150 1600
 F 0 "J1" H 1150 1200 50  0000 L CNN
 F 1 "Conn_01x06" H 950 1950 50  0000 L CNN
-F 2 "" H 1150 1600 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1150 1600 50  0001 C CNN
 F 3 "~" H 1150 1600 50  0001 C CNN
 	1    1150 1600
 	-1   0    0    -1  
@@ -1018,8 +1011,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 1700 1450 1700
 Wire Wire Line
-	1350 1800 1450 1800
-Wire Wire Line
 	1350 1900 1450 1900
 $Comp
 L Connector_Generic:Conn_01x02 J2
@@ -1027,7 +1018,7 @@ U 1 1 5AD7366F
 P 8000 4550
 F 0 "J2" H 8080 4542 50  0000 L CNN
 F 1 "Conn_01x02" H 8080 4451 50  0000 L CNN
-F 2 "" H 8000 4550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8000 4550 50  0001 C CNN
 F 3 "~" H 8000 4550 50  0001 C CNN
 	1    8000 4550
 	1    0    0    -1  
@@ -1056,4 +1047,82 @@ Wire Wire Line
 Wire Wire Line
 	7550 4550 7700 4550
 Connection ~ 7700 4550
+Wire Wire Line
+	3700 2350 3600 2350
+Text GLabel 5300 1550 2    50   Output ~ 0
+SCL
+Text GLabel 5300 1450 2    50   BiDi ~ 0
+SDA
+$Comp
+L Device:R R19
+U 1 1 5AEDD233
+P 4950 1200
+F 0 "R19" H 4880 1154 50  0000 R CNN
+F 1 "10k" H 4880 1245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4880 1200 50  0001 C CNN
+F 3 "~" H 4950 1200 50  0001 C CNN
+	1    4950 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5AEDD2C1
+P 5200 1200
+F 0 "R20" H 5130 1154 50  0000 R CNN
+F 1 "10k" H 5130 1245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5130 1200 50  0001 C CNN
+F 3 "~" H 5200 1200 50  0001 C CNN
+	1    5200 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 1350 4950 1550
+Connection ~ 4950 1550
+Wire Wire Line
+	4950 1550 5300 1550
+Wire Wire Line
+	5200 1350 5200 1450
+Connection ~ 5200 1450
+Wire Wire Line
+	5200 1450 5300 1450
+Wire Wire Line
+	4950 1050 4950 1000
+Wire Wire Line
+	4950 1000 5050 1000
+Wire Wire Line
+	5200 1000 5200 1050
+$Comp
+L power:VCC #PWR0101
+U 1 1 5AEF267E
+P 5050 1000
+F 0 "#PWR0101" H 5050 850 50  0001 C CNN
+F 1 "VCC" H 5067 1173 50  0000 C CNN
+F 2 "" H 5050 1000 50  0001 C CNN
+F 3 "" H 5050 1000 50  0001 C CNN
+	1    5050 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 1000
+Wire Wire Line
+	5050 1000 5200 1000
+Wire Wire Line
+	2050 1400 2300 1400
+Connection ~ 2050 1400
+Wire Wire Line
+	1350 1800 2300 1800
+Wire Wire Line
+	2300 1400 2300 1800
+$Comp
+L power:GND #PWR0102
+U 1 1 5AF2B9FF
+P 1450 1900
+F 0 "#PWR0102" H 1450 1650 50  0001 C CNN
+F 1 "GND" H 1455 1727 50  0000 C CNN
+F 2 "" H 1450 1900 50  0001 C CNN
+F 3 "" H 1450 1900 50  0001 C CNN
+	1    1450 1900
+	1    0    0    -1  
+$EndComp
+Text Notes 1100 2400 0    50   ~ 0
+BME280 Sensor:\nCSB to VSS = I2C interface\nSDO to GND = Default Address
 $EndSCHEMATC
