@@ -131,7 +131,7 @@ Wire Wire Line
 	10200 750  10300 750 
 Wire Wire Line
 	10200 850  10300 850 
-Text GLabel 9100 1250 0    50   Output ~ 0
+Text GLabel 9100 1250 0    50   BiDi ~ 0
 SWIM
 Text GLabel 8600 1350 0    50   Output ~ 0
 RST
@@ -139,7 +139,7 @@ Wire Wire Line
 	9100 1250 9200 1250
 Wire Wire Line
 	8600 1350 8700 1350
-Text GLabel 3600 1450 0    50   Input ~ 0
+Text GLabel 3600 1450 0    50   BiDi ~ 0
 SWIM
 Text GLabel 3600 1550 0    50   Input ~ 0
 RST
