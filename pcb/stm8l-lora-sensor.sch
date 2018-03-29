@@ -550,17 +550,6 @@ F 3 "http://www.nxp.com/documents/data_sheet/74HC_HCT595.pdf" H 4900 6200 50  00
 	1    4900 6200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Display_Character:CA56-12EWA U4
-U 1 1 5AB7DAD4
-P 5050 4600
-F 0 "U4" H 5100 5167 50  0000 C CNN
-F 1 "CA56-12EWA" H 5100 5076 50  0000 C CNN
-F 2 "Display_7Segment:CA56-12EWA" H 5050 4000 50  0001 C CNN
-F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 4670 4630 50  0001 C CNN
-	1    5050 4600
-	1    0    0    -1  
-$EndComp
 Text GLabel 1700 4300 0    50   Input ~ 0
 IND_DATA
 Text GLabel 1700 4500 0    50   Input ~ 0
@@ -1515,4 +1504,15 @@ Wire Wire Line
 Connection ~ 4900 5450
 Wire Wire Line
 	4900 5450 4900 5500
+$Comp
+L display-led:HX3641BH U4
+U 1 1 5AF54F26
+P 5050 4600
+F 0 "U4" H 5100 5167 50  0000 C CNN
+F 1 "HX3641BH" H 5100 5076 50  0000 C CNN
+F 2 "display-led:HX3641BH" H 5050 4000 50  0001 C CNN
+F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 4670 4630 50  0001 C CNN
+	1    5050 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
