@@ -4,7 +4,6 @@ digraph Device {
  labelloc=t;
  label="STM8L LoRa Sensor";
 
- usb -> charger [label="5V"]
  solar -> charger [label="<6V"];
  charger -> lipo [dir=both];
  charger -> ldo [label="<4.5V"];
@@ -19,5 +18,5 @@ digraph Device {
  shiftregs -> display [label="parallel"];
 
  display [shape=polygon,sides=4,skew=0,label="8888"]
- ldo [label="LDO 3.0V"];
+ ldo [label="LDO 3.3V"];
 }
