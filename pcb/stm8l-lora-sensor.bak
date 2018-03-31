@@ -1510,9 +1510,52 @@ U 1 1 5AF54F26
 P 5050 4600
 F 0 "U4" H 5100 5167 50  0000 C CNN
 F 1 "HX3641BH" H 5100 5076 50  0000 C CNN
-F 2 "Display_7Segment:HX3641BH" H 5050 4000 50  0001 C CNN
+F 2 "display-led:HX3641BH" H 5050 4000 50  0001 C CNN
 F 3 "http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf" H 4670 4630 50  0001 C CNN
 	1    5050 4600
 	1    0    0    -1  
 $EndComp
+Text GLabel 2900 3400 0    50   Output ~ 0
+IND_LATCH
+$Comp
+L Device:LED D?
+U 1 1 5AC005C4
+P 3150 3400
+F 0 "D?" H 3142 3145 50  0000 C CNN
+F 1 "LED" H 3142 3236 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 3150 3400 50  0001 C CNN
+F 3 "~" H 3150 3400 50  0001 C CNN
+	1    3150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5AC00950
+P 3550 3400
+F 0 "R?" V 3757 3400 50  0000 C CNN
+F 1 "1k" V 3666 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3480 3400 50  0001 C CNN
+F 3 "~" H 3550 3400 50  0001 C CNN
+	1    3550 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5AC00AA8
+P 3800 3400
+F 0 "#PWR?" H 3800 3250 50  0001 C CNN
+F 1 "VCC" H 3817 3573 50  0000 C CNN
+F 2 "" H 3800 3400 50  0001 C CNN
+F 3 "" H 3800 3400 50  0001 C CNN
+	1    3800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3400 3000 3400
+Wire Wire Line
+	3300 3400 3400 3400
+Wire Wire Line
+	3700 3400 3800 3400
+Text Notes 2450 3250 0    50   ~ 0
+Activity indicator for sensor node
 $EndSCHEMATC
