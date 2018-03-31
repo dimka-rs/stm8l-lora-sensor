@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 14)
+    (drawings 15)
     (tracks 620)
     (zones 0)
     (modules 50)
@@ -11,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
@@ -2246,6 +2246,9 @@
     )
   )
 
+  (gr_text github.com/dimka-rs/stm8l-lora-sensor (at 35 101.5 90) (layer B.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_arc (start 62 126) (end 62 127) (angle -90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 31 126) (end 30 126) (angle -90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 31 71) (end 31 70) (angle -90) (layer Edge.Cuts) (width 0.15))
@@ -2266,7 +2269,7 @@
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_line (start 46.5 70) (end 46.5 127) (layer Dwgs.User) (width 0.2))
-  (gr_line (start 30 126) (end 30 70) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 30 126) (end 30 71) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 62 127) (end 31 127) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 63 71) (end 63 126) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 31 70) (end 62 70) (layer Edge.Cuts) (width 0.15))
